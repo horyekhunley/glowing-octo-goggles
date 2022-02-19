@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const ip = require("ip");
 require("dotenv").config();
-// const errorHandler = require("./backend/middleware/error_middleware.js");
+const errorHandler = require("./backend/middleware/error_middleware.js");
 
 const userRoutes = require("./backend/routes/user_routes");
 
