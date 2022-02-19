@@ -3,7 +3,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const ip = require("ip");
 require("dotenv").config();
-const userRoutes = require('./backend/routes/user_routes');
+// const errorHandler = require("./backend/middleware/error_middleware.js");
+
+const userRoutes = require("./backend/routes/user_routes");
 
 const app = express();
 
@@ -21,7 +23,7 @@ mongoose
     process.exit;
   });
 
-app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/users", userRoutes);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
